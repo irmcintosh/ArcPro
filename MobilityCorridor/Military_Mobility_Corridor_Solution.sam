@@ -1,0 +1,232 @@
+{
+  "SAModels": {
+    "Info": {
+      "ModelNames": [
+        "New Suitability Model"
+      ],
+      "ModelTypes": [
+        "Suitability"
+      ]
+    },
+    "New Suitability Model": {
+      "General": {
+        "Version": "2.0",
+        "ModelName": "New Suitability Model",
+        "ModelType": "Suitability",
+        "CreateDate": "6/3/2024 1:54:33 PM",
+        "ModifyDate": "6/3/2024 8:12:46 PM",
+        "CriterionCount": 0,
+        "QueryCount": 0,
+        "SuitabilityMapViewName": "Map"
+      },
+      "Control": {
+        "WeightByIndex": 0,
+        "ScaleIndex": 4,
+        "OutRaster": "C:\\Users\\Ian12724\\Desktop\\Military_Mobility_Corridor_Solution\\Corridor.gdb\\Suitability_map",
+        "SummaryReport": "",
+        "AutoCalculate": true,
+        "ModelInputIndex": 0,
+        "WeightMethodIndex": 0
+      },
+      "Suitability": {
+        "CriteriaNames": [],
+        "XformNames": [],
+        "CriteriaURIs": [],
+        "TransformURIs": [],
+        "XmlDataConns": [],
+        "XmlXfmConns": [],
+        "WeightValues": [],
+        "MinWeights": [],
+        "MaxWeights": [],
+        "IsSelected": [],
+        "TransformCategory": [],
+        "TransformParameters": [],
+        "FromScale": 1.0,
+        "ToScale": 10.0,
+        "XmlWXfmConns": [],
+        "CriteriaState": [],
+        "TableConnection": [],
+        "HasJoins": [],
+        "HasSavedTransform": [],
+        "SavedTransformXML": [],
+        "SavedTransformDataset": [],
+        "UniqueFieldIndex": [],
+        "UniqueTransformField": [],
+        "UniqueTransformUsed": [],
+        "RangeFieldIndex": [],
+        "RangeTransformField": [],
+        "RangeTransformUsed": [],
+        "ContinuousTransformName": [],
+        "ContinuousTransformType": [],
+        "ContinuousTransformUsed": [],
+        "AllNodata": [],
+        "IsInteger": [],
+        "IsSubmodel": [],
+        "SuitabilityMapLayerName": "Suitability_map",
+        "SuitabilityMapURI": "",
+        "XmlSuitability": "",
+        "HasFinalSuitability": false,
+        "ActiveCriteriaName": ""
+      },
+      "Query": {
+        "QueryLayerName": "Exploratory query",
+        "QueryLayerXml": "",
+        "QueryLayerColorXml": "",
+        "QueryPickItems": {
+          "QueryPickItemsCount": 1,
+          "QueryLayers": [
+            "Raster_DTED2_30m_14N"
+          ],
+          "QueryLayerURIs": [
+            "CIMPATH=map/raster_dted2_30m_14n.json"
+          ],
+          "QueryDataConnects": [
+            "<CIMStandardDataConnection xsi:type='typens:CIMStandardDataConnection' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/3.2.0'><WorkspaceConnectionString>DATABASE=C:\\Users\\Ian12724\\Desktop\\Miscellaneous\\Drill\\TX\\TX.gdb</WorkspaceConnectionString><WorkspaceFactory>FileGDB</WorkspaceFactory><Dataset>Raster_DTED2_30m_14N</Dataset><DatasetType>esriDTRasterDataset</DatasetType></CIMStandardDataConnection>"
+          ],
+          "QueryTableConnects": [
+            ""
+          ],
+          "QueryValueField": [
+            ""
+          ],
+          "QueryHasJoins": [
+            false
+          ],
+          "QueryIsInteger": [
+            false
+          ],
+          "QueryFields": [
+            [
+              "Value"
+            ]
+          ],
+          "QueryFieldTypes": [
+            [
+              1
+            ]
+          ]
+        },
+        "QueryParameters": {
+          "QueryParametersCount": 0,
+          "QueryConjIndex": [],
+          "QueryLayerIndex": [],
+          "QueryFieldIndex": [],
+          "QueryOperatorIndex": [],
+          "QueryValueIndex": [],
+          "QueryValueInput": []
+        }
+      },
+      "Locate": {
+        "TotalArea": "",
+        "AreaUnits": "SQUARE_MAP_UNITS",
+        "OutRegionRaster": "C:\\Users\\Ian12724\\Desktop\\Military_Mobility_Corridor_Solution\\Corridor.gdb\\Suitable_locations",
+        "RegionCount": "1",
+        "RegionShape": "CIRCLE",
+        "TradeOffPct": "50",
+        "EvalMethod": "HIGHEST_AVERAGE_VALUE",
+        "RegionMinArea": "",
+        "RegionMaxArea": "",
+        "MaxDistBetRegions": "",
+        "MinDistBetRegions": "",
+        "DistanceUnits": "MAP_UNITS",
+        "ExistingRegions": "",
+        "NeighborGrowth": "EIGHT",
+        "IslandsAllowed": "true",
+        "SeedCount": "AUTO",
+        "ResolutionGrowth": "AUTO",
+        "SelectionMethod": "AUTO",
+        "LocateRegionsXml": "",
+        "LocateRegionsLayerName": "Suitable_locations",
+        "InLocateRaster": "",
+        "RegionOrientation": "0",
+        "LocateFullPath": "Suitable_locations"
+      },
+      "Environments": {
+        "workspace": "C:\\Users\\Ian12724\\Desktop\\Military_Mobility_Corridor_Solution\\Corridor.gdb",
+        "scratchWorkspace": "C:\\Users\\Ian12724\\Desktop\\Military_Mobility_Corridor_Solution\\Corridor.gdb",
+        "outputCoordinateSystem": "",
+        "geographicTransformations": "",
+        "extent": "DEFAULT",
+        "parallelProcessingFactor": "",
+        "cellSize": "MAXOF",
+        "cellSizeProjectionMethod": "Convert units",
+        "mask": "",
+        "snapRaster": "",
+        "configKeyword": "",
+        "autoCommit": "1000",
+        "compression": "LZ77",
+        "tileSize": "128 128",
+        "rasterStatistics": "STATISTICS 1 1"
+      },
+      "SuitabilityEnvironments": {
+        "extent": "DEFAULT",
+        "cellSize": "MAXOF",
+        "outputCoordinateSystem": "",
+        "geographicTransformations": "",
+        "parallelProcessingFactor": "",
+        "cellSizeProjectionMethod": "Convert units",
+        "mask": "",
+        "snapRaster": "",
+        "configKeyword": "",
+        "autoCommit": "1000",
+        "compression": "LZ77",
+        "tileSize": "128 128"
+      },
+      "LocateEnvironments": {
+        "extent": "DEFAULT",
+        "cellSize": "MAXOF",
+        "outputCoordinateSystem": "",
+        "geographicTransformations": "",
+        "cellSizeProjectionMethod": "Convert units",
+        "mask": "",
+        "snapRaster": "",
+        "configKeyword": "",
+        "autoCommit": "1000",
+        "compression": "LZ77",
+        "rasterStatistics": "STATISTICS 1 1",
+        "tileSize": "128 128"
+      },
+      "SourcesDataGroups": {
+        "LocalDataParams": [],
+        "ServiceDataParams": [],
+        "NoXFMDataParams": [],
+        "SourcesDataItems": "[\"Raster_DTED2_30m_14N\"]",
+        "LayerPathMapping": "[{\"LayerName\":\"Raster_DTED2_30m_14N\",\"LayerPath\":\"C:\\\\Users\\\\Ian12724\\\\Desktop\\\\Miscellaneous\\\\Drill\\\\TX\\\\TX.gdb\\\\Raster_DTED2_30m_14N\",\"LayerURI\":\"CIMPATH=map/raster_dted2_30m_14n.json\"}]",
+        "AFRDataParams": []
+      },
+      "Evaluate": {
+        "DefaultEvaluateTemplate": true,
+        "EvaluateLeftViewName": "",
+        "EvaluateRightViewName": "",
+        "EvaluateSuitabilityParameters": {
+          "SuitabilityMapState": "",
+          "LocateMapState": ""
+        },
+        "EvaluateLocateParameters": {
+          "LocateLayerName": "",
+          "LocateFullPath": ""
+        },
+        "EvaluateOverview": {
+          "SelectedOverviewExploreLayer": ""
+        },
+        "EvaluateCriteria": {
+          "SelectedCriteriaExploreStatistic": "",
+          "SelectedCriteriaInfluenceItem": "",
+          "SelectedCriteriaInfluenceStatistic": ""
+        },
+        "EvaluateSummarize": {
+          "SelectedSummarizeSuitabilityIndex": "",
+          "SelectedSummarizeCriteriaIndex": ""
+        },
+        "EvaluateValidate": {
+          "SelectedValidateSuitabilityIndex": "",
+          "SelectedValidateCriteriaIndex": ""
+        },
+        "EvaluateLocate": {
+          "SelectedLocateSuitabilityIndex": "",
+          "SelectedLocateCriteriaIndex": ""
+        }
+      }
+    }
+  }
+}
