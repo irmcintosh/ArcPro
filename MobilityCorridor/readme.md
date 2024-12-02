@@ -36,7 +36,7 @@ This repository demonstrates a GIS-based workflow for analyzing military mobilit
 3. Customize the obstacle layers or basemap for your specific region of interest.
 
 ## Example
-
+![MC](https://github.com/irmcintosh/ArcPro/blob/main/MobilityCorridor/MC.gif)
 
 
 ## Purpose
