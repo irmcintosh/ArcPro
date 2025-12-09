@@ -37,3 +37,36 @@ print("Append (async) job status:", append_result)
 # fs = sdf.spatial.to_featureset()
 # edit_result = hosted_fl.edit_features(adds=fs)
 # print("Edit features result:", edit_result)
+
+
+
+from arcgis.gis import GIS
+from arcgis.features import FeatureLayer
+
+# ------------------------------------------------------------
+# 1. Connect to AGOL
+# ------------------------------------------------------------
+gis = GIS("https://www.arcgis.com", "your_username", "your_password")
+
+# Hosted table (layer 16)
+url = "https://services1.arcgis.com/Db1xAiSxphB6ddWB/ArcGIS/rest/services/WeatherOperationalEffects_86264fb57dc3410ca006452cc4e615ae/FeatureServer/16"
+table = FeatureLayer(url)
+
+# ------------------------------------------------------------
+# 2. Read your local data WITHOUT arcpy (example: reading from FGDB using Pandas + fiona)
+# ------------------------------------------------------------
+import fiona
+
+local_table = r"C:\Users\Ian12724\Desktop\Miscellaneous\Drill\WeaherOpsDev\WOE.gdb\Points_Forecast_Data_Operational_Effects"
+
+rows = []
+with fiona.open(local_table) as src:
+    for feat in src:
+        rows.append({"attributes": feat["properties"]})
+
+# ------------------------------------------------------------
+# 3. Bulk insert into the feature service
+# ------------------------------------------------------------
+result = table.edit_features(adds=rows)
+
+print(result)
