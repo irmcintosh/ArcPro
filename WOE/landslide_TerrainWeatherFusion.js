@@ -1,5 +1,6 @@
 var s = $feature.slope_class;
-var w = $feature.landslideweathereffect;
+var w = $feature.landslidecombinedweather;
+
 
 If (s == "Flat") return "U";
 
