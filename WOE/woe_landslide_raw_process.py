@@ -99,3 +99,35 @@ with arcpy.da.UpdateCursor(
             count_updated += 1
 
 print(f"UPDATE COMPLETE — {count_updated} records updated.")
+
+# ===============================================================
+# UPDATE SLOPE VALUES IN OPS TABLE (NO OVERWRITE)
+# ===============================================================
+# Copies slope degree, slope class, and landslide candidate flag
+# from "Points of Interest" into the operational effects table.
+
+poi_fc = r"C:\Users\Ian12724\Desktop\Miscellaneous\Drill\WeaherOpsDev\WOE.gdb\Points_of_Interest"
+ops_fc = ops_table   # same variable from earlier
+
+count_slope_updates = 0
+
+with arcpy.da.SearchCursor(poi_fc, ['OBJECTID', 'slopedeg', 'slopeclass', 'landslidecandidate']) as sCur:
+    for locId, sdeg, sclass, lscand in sCur:
+
+        # Match rows by locationid
+        where = f"locationid = {locId}"
+
+        with arcpy.da.UpdateCursor(
+            ops_fc,
+            ['slope_degree', 'slope_class', 'landslide_candidate'],
+            where
+        ) as uCur:
+
+            for uRow in uCur:
+                uRow[0] = sdeg          # slope_degree
+                uRow[1] = sclass        # slope_class
+                uRow[2] = lscand        # landslide_candidate
+                uCur.updateRow(uRow)
+                count_slope_updates += 1
+
+print(f"SLOPE SYNC COMPLETE — {count_slope_updates} records updated.")
